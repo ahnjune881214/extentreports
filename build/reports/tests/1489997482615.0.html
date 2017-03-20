@@ -1,0 +1,989 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="ko"><head>
+<title>TNC Partner</title>
+<!-- meta tiles include -->
+
+<meta http-equiv="Cache-Control" content="no-store" />
+<!-- HTTP 1.1 -->
+<meta http-equiv="Pragma" content="no-cache" /> 
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+<!-- HTTP 1.0 -->
+<meta http-equiv="Expires" content="0" />
+<!-- Prevents caching at the Proxy Server -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="generator" content="1.0" />
+<!-- leave this for stats please -->
+<link rel="icon" href="/admin/img/favicon.ico" />
+<meta name="description" content="TNC Administrator" />
+<meta name="keywords" content="TNC" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="_csrf" content="" />
+<!-- default header name is X-CSRF-TOKEN -->
+<meta name="_csrf_header" content="" />
+
+<!--  css tiles include -->
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/admin/lib/jqwidgets/styles/jqx.base.css" />
+<link rel="stylesheet" type="text/css" href="/admin/css/style.css " />
+
+
+<!-- script tiles include -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Page Context -->
+<script>
+var root ="/admin";
+var cdnServerUrl = "http://img.wemep.co.kr/tnc";
+var wwwDomainUrl = "";
+var uploadUrl = "http://tour-upload-api.wemakeprice.com:8080/upload/file";
+var uploadDeleteUrl = "http://tour-upload-api.wemakeprice.com:8080/upload/delete/file";
+var downloadImageUrl = "http://tour-upload-api.wemakeprice.com:8080/upload/image/download";
+</script>
+<script type="text/javascript" src="/admin/lib/common/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/admin/lib/common/jquery.validate.min.js"></script>
+
+<script type="text/javascript" src="/admin/lib/common/jquery.alphanum.js"></script>
+
+<script type="text/javascript" src="/admin/lib/jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="/admin/lib/jqwidgets/jqxdatetimeinput.js"></script>
+<script type="text/javascript" src="/admin/lib/jqwidgets/jqxcalendar.js"></script>
+<script type="text/javascript" src="/admin/lib/jqwidgets/jqxtooltip.js"></script>
+<script type="text/javascript" src="/admin/lib/jqwidgets/globalization/globalize.js"></script>
+
+<script type="text/javascript" src="/admin/js/common/util.js"></script>
+<script type="text/javascript" src="/admin/js/admin/format.js"></script>
+<script type="text/javascript" src="/admin/js/common/ajax.js"></script>
+<script type="text/javascript" src="/admin/js/common/ui.common.js"></script>
+<script type="text/javascript" src="/admin/js/common/ui.menu.js"></script>
+
+<script type="text/javascript" src="/admin/js/admin/validation.js"></script>
+
+<script>
+var gnb = "0";
+$(window).load(function(){
+	setGnbHiddenObject();
+});
+</script>
+
+</head>
+	
+	<body>
+	
+		<div id="wrap">
+			<div id="container" class="partner">
+				
+
+
+
+
+
+
+
+
+
+
+<div id="headerWrap">
+	<h1>
+		
+			
+			<a href="/admin"><img src="/admin/img/logo_partner.jpg" alt="위메프 partner" /></a>
+		
+	</h1>
+	<div class="personalArea">
+		
+		<div class="my_info">안녕하세요. <strong>테스트비즈</strong>님</div>
+		<ul class="menu_list">
+			
+			<li class="tooltipArea">
+				<div class="">
+				<a href="#" class="alram">알림<span class="num">20</span></a>
+					<div class="tooltip">
+					<table class="tb_alram_list">
+						<colgroup>
+							
+						</colgroup>
+						<tbody><tr>
+							<td><a href="/admin/partner/product/noticeList.html?standBy=standBy" class="link_title">상품정보 등록 대기</a></td>
+							<td class="num_detail"><em>17</em>건</td>
+						</tr>
+						<tr>
+							<td><a href="/admin/partner/contract/contractList.html?standBy=standBy" class="link_title">상품합의서 승인대기</a></td>
+							<td class="num_detail"><em>3</em>건</td>
+						</tr>
+					</tbody></table>
+					</div>
+				</div>
+			</li>
+			<li><a href="/admin/partner/boards/list/noticeToGuide.html">공지사항</a></li>
+			<li><a href="/admin/mypage/myInfoModify.html">정보수정</a></li>
+			
+			<li><a href="/admin/logout.html">로그아웃</a></li>
+		</ul>
+		<div class="tel_txt">파트너센터 1644-4796</div>
+		
+	</div>
+</div>
+<!-- //headerWrap -->
+
+<script>
+var cdnServerUrl = 'http://img.wemep.co.kr/tnc';
+var cdnWWWUrl = '';
+var productRegisterWaitingCount = '17';
+var productConfirmWaitingCount = '3';
+</script>
+				
+				
+
+
+
+
+
+
+
+
+
+
+<div id="leftArea">
+	<div class="gnbArea">
+		<ul class="gnb">
+			<li class="" key="15" level="1">
+				<a href="#">게시판관리</a>
+				<ul class="lnb">
+			<li class="" key="168" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/boards/list/noticeToGuide.html','168');">가이드공지사항</a>
+			</li>
+				</ul>
+			</li>
+
+			<li class="null" key="101" level="1">
+				<a href="#">배송상품관리</a>
+				<ul class="lnb">
+			<li class="" key="102" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/order/requestOrderList.html','102');">배송주문관리</a>
+			</li>
+			<li class="" key="171" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/order/requestCancelList.html','171');">취소요청관리</a>
+			</li>
+			<li class="" key="172" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/order/requestExchangeList.html','172');">교환요청관리</a>
+			</li>
+			<li class="" key="173" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/order/requestRefundList.html','173');">반품주문관리</a>
+			</li>
+				</ul>
+			</li>
+
+			<li class="null" key="143" level="1">
+				<a href="#">티켓상품관리</a>
+				<ul class="lnb">
+			<li class="" key="144" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/ticket/ticketUse.html','144');">티켓사용처리</a>
+			</li>
+			<li class="" key="146" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/ticket/ticketUseList.html','146');">사용처리내역</a>
+			</li>
+			<li class="" key="147" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/ticket/ticketUseCancel.html','147');">취소신청관리</a>
+			</li>
+				</ul>
+			</li>
+
+			<li class="null" key="149" level="1">
+				<a href="#">상품정보관리</a>
+				<ul class="lnb">
+			<li class="" key="169" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/product/registerViewMain.html','169');">상품등록</a>
+			</li>
+			<li class="" key="170" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/product/list.html','170');">상품검색</a>
+			</li>
+			<li class="" key="152" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/product/noticeList.html','152');">상품고시정보</a>
+			</li>
+			<li class="" key="150" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/board/list/qna.html','150');">상품Q&amp;A</a>
+			</li>
+			<li class="" key="151" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/board/list/productReview.html','151');">구매후기</a>
+			</li>
+				</ul>
+			</li>
+
+			<li class="null" key="153" level="1">
+				<a href="#">계약관리</a>
+				<ul class="lnb">
+			<li class="" key="154" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/contract/contractList.html','154');">상품판매합의서</a>
+			</li>
+			<li class="" key="156" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/contract/guaranteeInsurance.html','156');">지급이행보증서</a>
+			</li>
+				</ul>
+			</li>
+
+			<li class="null" key="157" level="1">
+				<a href="#">정산관리</a>
+				<ul class="lnb">
+			<li class="" key="158" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/settlement/saleStatus.html','158');">판매현황</a>
+			</li>
+			<li class="" key="159" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/settlement/settlementStatement.html','159');">정산내역서</a>
+			</li>
+			<li class="" key="160" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/settlement/paymentHistory.html','160');">지급내역</a>
+			</li>
+			<li class="" key="161" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/settlement/taxInvoice.html','161');">세금계산서</a>
+			</li>
+			<li class="" key="162" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/settlement/businessAgency.html','162');">영업대행관리</a>
+			</li>
+			<li class="" key="163" level="2" helpdocyn="n">
+				<a href="javascript:goMenuUrl('/admin/partner/settlement/adjustHistory.html','163');">임의조정내역</a>
+			</li>
+				</ul>
+			</li>
+</ul>
+
+	</div>
+	
+	<!-- <div class="lnbArea"></div> -->
+</div>
+				
+				<div id="contentsWrap" class="fluid">
+
+					<!-- location 공통영역으로 처리 -->
+					
+						
+						
+						
+						
+					
+					
+					<div class="contents">
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+	td[name="tdTitle"] {
+		cursor : pointer;	
+	}
+</style>
+<script type="text/javascript" src="/admin/js/admin/productCommon.js"></script>
+
+<script type="text/javascript" src="/admin/js/partner/common/ajaxCommand.js"></script>
+<script type="text/javascript" src="/admin/js/partner/common/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="/admin/js/partner/common/common.js"></script>
+
+  
+
+	<h2 id="section02">가이드 / 공지사항</h2>
+	<!-- section-->	
+	<div class="section">
+	<ul class="menu_block_list">
+		<li>
+			<a href="#" name="productSaleGuide"><strong>신규파트너</strong> 가이드</a>
+		</li>
+		<li>
+			<a href="http://image.wemakeprice.com/files/wmp_electronic_contract_guide_for_vendor.pdf" target="_blank" class="m_save"><strong>전자계약 체결</strong> 가이드</a>
+		</li>
+		<li>
+			<a href="http://image.wemakeprice.com/files/partner_proposal_guide_with_MD_V5_0.pdf" target="_blank" class="m_save"><strong>제안서 등록</strong> 가이드</a>
+		</li>
+		<li>
+			<a href="http://biz.wemakeprice.com/guide/templete.html" target="_blank" class="m_save"><strong>이미지 제작</strong> 가이드</a>
+		</li>
+		<li>
+			<a href="http://image.wemakeprice.com/manual/partner/wemakeprice_parnter_manual_biz_20150303.pdf" target="_blank" class="m_save"><strong>배송처리</strong> 가이드</a>
+		</li>
+		<li>
+			<a href="#" class="m_save"><strong>정산</strong> 정책</a>
+		</li>
+		<li>
+			<a href="#" id="productSaleGuide" name="productSaleGuide" class="m_save"><strong>상품 판매</strong> 가이드</a>
+		</li>
+		<li>
+			<a href="#" class="m_save"><strong>영업 양도/양수</strong> 신청서</a>
+		</li>
+	</ul>
+	<div class="tabArea">
+		<div class="tabMenu">
+			<a href="tab01" class="current">전체공지</a>
+			<a href="tab02" class="last">개별공지</a>
+		</div>
+	</div>	
+	<div id="tab01" class="tabContents" style="display: block;">	
+		<div class="util">
+			<div class="info" id="board_lst_count" name="board_lst_count">
+				<p>총 <strong>36</strong>건</p>
+			</div>
+		</div>	
+		 <!-- tblWrap -->		
+		<div class="tblWrap">
+			<!-- tblHorizon01 -->
+			<table class="tblHorizon01"> 
+				<caption>공지사항</caption>
+				<colgroup>
+					<col width="90px;" />
+					<col width="*" />
+					<col width="90px;" />
+					<col width="120px;" />
+				</colgroup>
+				<thead>
+					<tr><th>NO</th>
+					<th>제목</th>
+					<th>등록일</th>
+				</tr></thead>
+				<tbody id="board-all-info-tbody"><tr>   <input type="hidden" name="boardArticleId" value="977022" />         <td>36</td>   <td name="tdTitle" class="alignLeft">    ㅁㅇㄴㄹㄹㄹ               <a href="#" name="" class="link_addfile"><span></span></a>       </td>   <td>2017-02-27</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="977017" />         <td>35</td>   <td name="tdTitle" class="alignLeft">    테스트공지123               <a href="#" name="" class="link_addfile"><span></span></a>       </td>   <td>2017-02-24</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227105" />         <td>34</td>   <td name="tdTitle" class="alignLeft">    공지사항테스트7             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227104" />         <td>33</td>   <td name="tdTitle" class="alignLeft">    test             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227103" />         <td>32</td>   <td name="tdTitle" class="alignLeft">    공지사항테스트6             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227102" />         <td>31</td>   <td name="tdTitle" class="alignLeft">    공지사항테스트6               <a href="#" name="" class="link_addfile"><span></span></a>       </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227101" />         <td>30</td>   <td name="tdTitle" class="alignLeft">    공지사항테스트6             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227100" />         <td>29</td>   <td name="tdTitle" class="alignLeft">    공지사항테스트6             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227099" />         <td>28</td>   <td name="tdTitle" class="alignLeft">    공지사항테스트6             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227098" />         <td>27</td>   <td name="tdTitle" class="alignLeft">    공지사항테스트5             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227097" />         <td>26</td>   <td name="tdTitle" class="alignLeft">    공지사항테스트4             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227096" />         <td>25</td>   <td name="tdTitle" class="alignLeft">    공지사항테스트3             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227095" />         <td>24</td>   <td name="tdTitle" class="alignLeft">    공지사항테스트2             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227094" />         <td>23</td>   <td name="tdTitle" class="alignLeft">    공지사항테스트2             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227093" />         <td>22</td>   <td name="tdTitle" class="alignLeft">    공지사항테스트1             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227092" />         <td>21</td>   <td name="tdTitle" class="alignLeft">    공지사항테스트1             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="212701" />         <td>20</td>   <td name="tdTitle" class="alignLeft">    공지사항 첨부파일 테스트               <a href="#" name="" class="link_addfile"><span></span></a>       </td>   <td>2017-02-22</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="212697" />         <td>19</td>   <td name="tdTitle" class="alignLeft">    ㄴㅇㄹㄹㄴ               <a href="#" name="" class="link_addfile"><span></span></a>       </td>   <td>2017-02-21</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="212694" />         <td>18</td>   <td name="tdTitle" class="alignLeft">    전체 공지사항 테스트             </td>   <td>2017-02-21</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="212693" />         <td>17</td>   <td name="tdTitle" class="alignLeft">    ssfdssfddsffdsdsfdsfddsfdsf               <a href="#" name="" class="link_addfile"><span></span></a>       </td>   <td>2017-02-21</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="212690" />         <td>16</td>   <td name="tdTitle" class="alignLeft">    [QA남] 공지사항 01               <a href="#" name="" class="link_addfile"><span></span></a>       </td>   <td>2017-02-21</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="212689" />         <td>15</td>   <td name="tdTitle" class="alignLeft">    공지 테스트 입니다.               <a href="#" name="" class="link_addfile"><span></span></a>       </td>   <td>2017-02-21</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="36190" />         <td>14</td>   <td name="tdTitle" class="alignLeft">    테스트를 위한 공지 등록합니다.             </td>   <td>2017-02-13</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="3957" />         <td>13</td>   <td name="tdTitle" class="alignLeft">    운영관리 공지사항 테스트               <a href="#" name="" class="link_addfile"><span></span></a>       </td>   <td>2017-02-08</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="2562" />         <td>12</td>   <td name="tdTitle" class="alignLeft">    원활한 운영을 위해 버그를 찾아봅시다.               <a href="#" name="" class="link_addfile"><span></span></a>       </td>   <td>2017-02-03</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="516" />         <td>11</td>   <td name="tdTitle" class="alignLeft">    [모든 딜 공지 사항 등록]               <a href="#" name="" class="link_addfile"><span></span></a>       </td>   <td>2017-02-03</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="435" />         <td>10</td>   <td name="tdTitle" class="alignLeft">    테스트 공지             </td>   <td>2017-02-02</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="433" />         <td>9</td>   <td name="tdTitle" class="alignLeft">    공지사항 등록 테스트 모든딜             </td>   <td>2017-02-02</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="294" />         <td>8</td>   <td name="tdTitle" class="alignLeft">    [식약처] 씨엘아쿠아스멀티액(염화나트륨) (test)             </td>   <td>2017-01-12</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="293" />         <td>7</td>   <td name="tdTitle" class="alignLeft">    [식약처] 바데카실세라3 (test)             </td>   <td>2017-01-12</td>     </tr></tbody>
+			</table>
+			<!-- //tblHorizon01 -->
+		</div>	
+		 <!--// tblWrap -->	
+		<!--paginate -->	
+		<div id="paginate">
+			<input type="hidden" name="page_idx" id="noticeAllPageIdx" value="1" />
+			<input type="hidden" name="total_cnt" id="noticeAllTotalCount" value="36" />
+			<div class="paginate"><a "#"="" name="current" class="current" style="cursor: pointer;">1</a>      <a "#"="" name="current" class="" style="cursor: pointer;">2</a></div>
+		</div>
+		<!--//paginate -->	
+	</div>	
+	<div id="tab02" class="tabContents" style="display: none;">	 
+		<div class="util">
+			<div class="info" id="board_lst_count" name="board_lst_count">
+				<p>총 <strong>32</strong>건</p>
+			</div>
+		</div>	
+		 <!-- tblWrap -->		
+		<div class="tblWrap">
+			<!-- tblHorizon01 -->
+			<table class="tblHorizon01">
+				<caption>공지사항</caption>
+				<colgroup>
+					<col width="90px;" />
+					<col width="*" />
+					<col width="90px;" />
+					<col width="120px;" />
+				</colgroup>
+				<thead>
+					<tr><th>NO</th>
+					<th>제목</th>
+					<th>등록일</th>
+				</tr></thead>
+				<tbody id="board-indiv-info-tbody"><tr>   <input type="hidden" name="boardArticleId" value="977024" />         <td>32</td>   <td name="tdTitle" class="alignLeft">    개별공지 이미지 첨부               <a href="#" name="" class="link_addfile"><span></span></a>       </td>   <td>2017-02-27</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227124" />         <td>31</td>   <td name="tdTitle" class="alignLeft">    개별공지31             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227123" />         <td>30</td>   <td name="tdTitle" class="alignLeft">    개별공지 30             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227122" />         <td>29</td>   <td name="tdTitle" class="alignLeft">    개별공지 29             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227121" />         <td>28</td>   <td name="tdTitle" class="alignLeft">    개별공지26             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227120" />         <td>27</td>   <td name="tdTitle" class="alignLeft">    개별공지25             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227119" />         <td>26</td>   <td name="tdTitle" class="alignLeft">    개별공지24             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227118" />         <td>25</td>   <td name="tdTitle" class="alignLeft">    개별공지23             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227117" />         <td>24</td>   <td name="tdTitle" class="alignLeft">    개별공지22             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227116" />         <td>23</td>   <td name="tdTitle" class="alignLeft">    개별공지20             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227115" />         <td>22</td>   <td name="tdTitle" class="alignLeft">    개별공지21             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227114" />         <td>21</td>   <td name="tdTitle" class="alignLeft">    개별공지19             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227113" />         <td>20</td>   <td name="tdTitle" class="alignLeft">    개별공지 18             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227112" />         <td>19</td>   <td name="tdTitle" class="alignLeft">    개별공지17             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227111" />         <td>18</td>   <td name="tdTitle" class="alignLeft">    개별공지16             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227110" />         <td>17</td>   <td name="tdTitle" class="alignLeft">    개별공지14             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227109" />         <td>16</td>   <td name="tdTitle" class="alignLeft">    개별 공지13             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227108" />         <td>15</td>   <td name="tdTitle" class="alignLeft">    개별공지             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227107" />         <td>14</td>   <td name="tdTitle" class="alignLeft">    개별 공지12             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227106" />         <td>13</td>   <td name="tdTitle" class="alignLeft">    개별 공지11             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227091" />         <td>12</td>   <td name="tdTitle" class="alignLeft">    개별 공지 11             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227090" />         <td>11</td>   <td name="tdTitle" class="alignLeft">    개별 공지10             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227089" />         <td>10</td>   <td name="tdTitle" class="alignLeft">    개별 공지9             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227088" />         <td>9</td>   <td name="tdTitle" class="alignLeft">    개별 공지8             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227087" />         <td>8</td>   <td name="tdTitle" class="alignLeft">    개별공지 7             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227086" />         <td>7</td>   <td name="tdTitle" class="alignLeft">    개별 공지6             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227085" />         <td>6</td>   <td name="tdTitle" class="alignLeft">    개별 공지5             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227084" />         <td>5</td>   <td name="tdTitle" class="alignLeft">    개별 공지4             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227083" />         <td>4</td>   <td name="tdTitle" class="alignLeft">    개별 공지3             </td>   <td>2017-02-23</td>     </tr><tr>   <input type="hidden" name="boardArticleId" value="227082" />         <td>3</td>   <td name="tdTitle" class="alignLeft">    개별 공지2             </td>   <td>2017-02-23</td>     </tr></tbody>
+			</table>
+			<!-- //tblHorizon01 -->
+		</div>	
+		 <!--// tblWrap -->	
+		<!--paginate -->	
+		<div id="paginate">
+			<input type="hidden" name="page_idx" id="noticePageIdx" value="1" />
+			<input type="hidden" name="total_cnt" id="noticeTotalCount" value="32" />
+			<div class="paginate"><a "#"="" name="current" class="current" style="cursor: pointer;">1</a>      <a "#"="" name="current" class="" style="cursor: pointer;">2</a></div>
+		</div>
+		<!--//paginate -->	
+	</div>
+</div>	
+<!-- //section-->	
+
+
+
+
+
+
+
+
+
+<!-- 상품판매 가이드 팝업 -->
+	<!-- popWrap700 -->
+	<!--옵션수정 팝업 시작 -->
+	<div class="popWrap700" style="display: none;" id="pop">
+		<h1>위메프 상품판매 단계별 가이드</h1>
+		<!-- popContents -->
+		<div class="popContents">
+			<dl class="guide_step">
+				<dt>
+					<div class="tit"><span class="step_txt">Step1</span> 전자계약을 체결해주세요</div>
+					<div class="posRight">
+						<a href="http://www.nicedocu.com/web/buyer/main/index.jsp" target="_blank" class="btnTypeRd">전자계약 진행하기</a>
+						<a href="http://image.wemakeprice.com/files/wmp_electronic_contract_guide_for_vendor.pdf" target="_blank" class="btnTypeSw">전자계약 체결 가이드</a>
+					</div>
+				</dt>
+				<dd>
+					<ol class="g_list">
+						<li>	
+							전자계약을 체결하셔야 상품판매가 가능합니다.<br />
+							지역 서비스딜은 서면 계약으로 진행되오니, 위메프 담당자에게 문의 후 진행해주세요.
+						</li>
+					</ol>
+				</dd>
+			</dl>
+			<dl class="guide_step">
+				<dt>
+					<div class="tit"><span class="step_txt">Step2</span> 제안서를 등록해주세요</div>
+					<div class="posRight">
+						<a href="/admin/partner/product/registerViewMain.html" target="_blank" class="btnTypeRd">제안서 등록하기</a>
+						<a href="http://image.wemakeprice.com/files/partner_proposal_guide_with_MD_V5_0.pdf" target="_blank" class="btnTypeSw">제안서 등록 가이드</a>
+					</div>
+				</dt>
+				<dd>
+					<ol class="g_list">
+						<li class="btns">
+							1. <strong>상품정보관리 &gt; 상품등록</strong> 메뉴에서 판매하시려는 상품을 <strong>등록/제안</strong>해 주세요.
+							<div class="posRight">
+								<a href="http://biz.wemakeprice.com/guide/templete.html" target="_blank" class="btnTypeSw">이미지 제작 가이드</a>
+							</div>
+						</li>
+						<li>
+							2. <strong>상품 제안 후 담당자의 승인</strong>을 기다려주세요.
+							<ul class="sub_list">
+								<li>
+									- 승인완료 : 위메프에서 제안서 내용 검토 후 상품판매합의서 발송
+  								 </li>
+  								 <li>
+  							    	 - 진행대기 : 제안서 중 수정사항 발생하여 수정 후 재승인요청 가능
+  								 </li>
+  								 <li>
+  							 	   - 판매불가 : 제안하신 내용으로 상품판매 불가
+  								 </li>
+							</ul>
+						</li>
+						<li>
+							3. 위메프 담당자가 발송한 <strong>상품판매합의서</strong>를 <strong>승인</strong>해 주세요.
+						</li>
+						<li>
+							4. <strong>상품판매합의서</strong>에 <strong>승인</strong>해 주시면, <strong>판매시작일</strong>에 <strong>상품판매</strong>가 <strong>진행</strong>됩니다.
+						</li>
+					</ol>
+				</dd>
+			</dl>
+			<dl class="guide_step">
+				<dt>
+					<div class="tit"><span class="step_txt">Step3</span> 상품판매 시작 후 아래 내용을 확인할 수 있습니다</div>
+				</dt>
+				<dd>
+					<ol class="g_list">
+						<li class="btns">
+							<strong>주문 확인 및 배송처리</strong> [배송상품관리] 메뉴에서 배송/교환/반품 처리
+							<div class="posRight">
+								<a href="http://image.wemakeprice.com/manual/partner/wemakeprice_parnter_manual_biz_20150303.pdf" target="_blank" class="btnTypeSw">배송처리 메뉴얼</a>
+							</div>
+						 </li>
+						<li class="btns">
+							<strong>정산 현황</strong> [정산관리] 메뉴에서 판매현황 및 기간별 정산금액 확인
+								<div class="posRight">
+								<a href="#" class="btnTypeSw">파트너 정산 정책</a>
+							</div>
+						</li>
+					</ol>
+				</dd>
+			</dl>
+			<ul class="sub_noti">
+				<li>※ 궁금하신 사항은 파트너센터(1644-4796)로 문의하시면 친절하게 안내해 드립니다.</li>
+			</ul>	
+			
+			<div class="posCenter">
+				<a href="#" onclick="tourUI.modalClose('#pop');" class="btnTypeLg">확인</a>
+			</div>	
+			<div class="btn_pop_close">
+				<a href="#" onclick="tourUI.modalClose('#pop');"><span class="blind">닫기</span></a>
+			</div>
+		</div>	
+		<!-- //popContents -->
+	</div>
+	
+	<!-- //popWrap700 -->	
+<!--// 상품판매 가이드 팝업 -->
+
+
+
+
+<!-- //Layer Popup template -->	 
+
+		
+		
+		
+		
+		
+<!-- Template html area -->
+<script id="board-paging-number-tmpl" type="text/x-jquery-tmpl">
+{{if true == prev_end}}
+&lt;a "#" id="prev_end" class="first"&gt;맨처음목록&lt;/a&gt;
+{{/if}}
+{{if true == prev}}
+&lt;a "#" id="prev" class="prev"&gt;이전목록&lt;/a&gt;
+{{/if}}
+
+
+{{each current_obj}}
+    &lt;a "#" name="current" class="{{if now_page == id}}current{{/if}}" style="cursor: pointer;"&gt;{{= id }}&lt;/a&gt;
+{{/each}}
+
+
+{{if true == next_end}}
+&lt;a "#" id="next" class="next"&gt;다음목록&lt;/a&gt;
+{{/if}}
+{{if true == next}}
+&lt;a "#" id="next_end" class="last"&gt;마지막목록&lt;/a&gt;
+{{/if}}
+</script> 
+
+
+
+
+
+
+
+
+<script id="board-sales-status-empty-tmpl" type="text/x-jquery-tmpl">
+	&lt;option value="0"&gt;::ALL::&lt;/option&gt;
+</script> 
+
+<script id="board-sales-status-list-tmpl" type="text/x-jquery-tmpl">
+	&lt;option value="{{html codeId}}"&gt;{{html codeName}}&lt;/option&gt;
+</script>
+
+
+
+
+<script id="board-empty-tmpl" type="text/x-jquery-tmpl">
+    &lt;tr style="height: 80px;"&gt;
+        &lt;td colspan="4"&gt;검색 결과가 없습니다.&lt;/td&gt;
+    &lt;/tr&gt;
+</script> 
+<script id="board-info-tmpl" type="text/x-jquery-tmpl">
+    &lt;tr&gt;
+		&lt;input type="hidden" name="boardArticleId" value="{{html boardArticleId}}"/&gt;
+        &lt;td&gt;{{html rowNum}}&lt;/td&gt;
+		&lt;td name="tdTitle" class="alignLeft"&gt;
+			{{html title}}
+	        {{if null != fileUrl &amp;&amp; '' != fileUrl }}
+				&lt;a href="#" name="" class="link_addfile"&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+			{{/if}}
+		&lt;/td&gt;
+		&lt;td&gt;{{html createDate}}&lt;/td&gt;
+    &lt;/tr&gt;
+</script>
+<!-- //티켓사용처리 일반티켓 템플릿 -->
+<!-- //Template html area -->		
+		
+		
+		
+		
+		
+		
+			    
+			    
+<script>
+
+
+
+
+
+	/* ####template method function#### */
+	var cdnServerUrl = 'http://img.wemep.co.kr/tnc';
+	/* ####--template method function#### */
+
+
+
+
+
+	
+
+
+	/* ####button event initialize function#### */
+	
+    function initializeDetailBtn() {
+
+       	$('td[name="tdTitle"]').each(function( index ) {
+
+            $(this).unbind('click');
+            $(this).on("click", (
+                function() {               
+
+
+                	var detailUrl = "/partner/boards/detail/noticeToGuide.html";
+
+                	//아이디값
+                	var boardArticleId = $(this).closest('tr').find('input:hidden[name="boardArticleId"]').val();
+                	var inputId = $('&lt;input/&gt;', {type:'hidden', name:'boardArticleId', value: boardArticleId});
+
+                	//탭구분 인자값
+            		var pubTargetDvsCd = 1;
+            		if( 'tab01' == getTabVitalize( $('.tabContents') ).attr('id') )
+            			pubTargetDvsCd = 0;
+
+            		var inputDvs = $('&lt;input/&gt;', {type:'hidden', name:'pubTargetDvsCd', value: pubTargetDvsCd});
+            		var inputEnd = $('&lt;input/&gt;', {type:'hidden', name:'end', value: 1});
+            		
+                	var $form = $('&lt;form&gt;&lt;/form&gt;');
+                	$form.attr('action', root+detailUrl);
+                	$form.attr('method', 'post');
+                	$form.append(inputId);
+                	$form.append(inputDvs);
+                	$form.append(inputEnd);
+                	$form.appendTo('body').submit().remove();
+            		
+                })
+            );
+    	});
+	}
+       	       	
+	/* ####--button event initialize function#### */
+
+
+
+
+
+	
+
+
+
+
+
+
+
+    /* ####filter function#### */
+    /* ####--filter function#### */
+
+
+
+
+    
+    
+    
+    
+    function loadData() {
+
+		if( 'tab01' == getTabVitalize( $('.tabContents') ).attr('id') )
+			loadDataAll();
+		else
+			loadDataIndiv();
+    }
+    
+    
+    //디버깅용으로 전역변수로 설정
+    //한페이지에 표시될 row 개수
+    var PageSize = 30; 
+    //하단 페이징에 출력 될 페이지숫자 개수
+    var PageUnit = 10;
+    var infos;
+    function loadDataAll(){
+        
+        var url = "/admin/partner/board/list/guide/all.json";
+        var pageIdx = $('input:hidden[name="page_idx"]').eq(0);
+        
+        //1. ajaxCall 성공 후 처리될 함수.
+        var CallButton = function(){};
+        CallButton.prototype.handling = function(obj) 
+        {
+            var info = obj;
+			infos = obj;
+            console.log('~loadData ~~~~');
+            console.log(info);
+
+
+            var pageCnt = $('input:hidden[name="total_cnt"]').eq(0);
+            var paginate = $(".paginate").eq(0);
+
+
+            if( undefinedEmptyReturn(info['result'].length) == '' ) {    
+                
+            	paginate.html("");
+            	$("#board-all-info-tbody").html("");     
+            	$("#board-empty-tmpl").tmpl().appendTo("#board-all-info-tbody");
+            }
+            else { 
+
+        	    $("#board-all-info-tbody").html("");     
+        	    $("#board-info-tmpl").tmpl( info['result'] ).appendTo("#board-all-info-tbody");
+
+        	    //총 카운트수 설정 
+        	    $('div[name="board_lst_count"]').eq(0).find('strong').html( info['totalCount'] );
+        	    pageCnt.val( info['totalCount'] );
+        	    pagingNumberDraw(pageIdx, pageCnt, paginate);
+
+
+        	    //상세화면 이동 버튼 초기화
+        	    initializeDetailBtn();
+            }
+            
+        };
+
+
+
+    	//2. jsonParameter 생성 및 파싱
+    	var jsonParam = new Object();
+    	jsonParam.page = pageIdx.val();
+    	jsonParam.listSize = PageSize;
+    	jsonParam.listUnit = PageUnit;
+    	jsonParam.end   = PageSize;
+
+
+    	var jsonData = JSON.stringify(jsonParam);
+
+		var sendInfo = {
+				jsonData : jsonData
+		}; 
+
+        //3. ajaxCall에서 사용할 데이터 정리.
+        var data = {
+                callBtn: CallButton,
+                url: url,
+                data: sendInfo,
+                duration: true
+        };          
+        
+        //4. ajax Call
+        ajaxCall.ado(data); 
+
+    }
+
+
+
+    function loadDataIndiv(){
+        
+        var url = "/admin/partner/board/list/guide.json";
+        var pageIdx = $('input:hidden[name="page_idx"]').eq(1); 
+        
+        //1. ajaxCall 성공 후 처리될 함수.
+        var CallButton = function(){};
+        CallButton.prototype.handling = function(obj) 
+        {
+            var info = obj;
+			infos = obj;
+            console.log('~loadData ~~~~');
+            console.log(info);
+
+
+            var pageCnt = $('input:hidden[name="total_cnt"]').eq(1);
+            var paginate = $(".paginate").eq(1);
+
+
+            if( undefinedEmptyReturn(info['result'].length) == '' ) {    
+                
+            	paginate.html("");
+            	$("#board-indiv-info-tbody").html("");     
+            	$("#board-empty-tmpl").tmpl().appendTo("#board-indiv-info-tbody");
+            }
+            else { 
+
+        	    $("#board-indiv-info-tbody").html("");     
+        	    $("#board-info-tmpl").tmpl( info['result'] ).appendTo("#board-indiv-info-tbody");
+
+        	    //총 카운트수 설정 
+        	    $('div[name="board_lst_count"]').eq(1).find('strong').html( info['totalCount'] );
+        	    pageCnt.val( info['totalCount'] );
+        	    pagingNumberDraw(pageIdx, pageCnt, paginate);
+
+
+        	    //상세화면 이동 버튼 초기화
+        	    initializeDetailBtn();
+            }
+            
+        };
+
+
+
+    	//2. jsonParameter 생성 및 파싱
+    	var jsonParam = new Object();
+    	jsonParam.page = pageIdx.val();
+    	jsonParam.listSize = PageSize;
+    	jsonParam.listUnit = PageUnit;
+    	jsonParam.end   = PageSize;
+
+
+    	var jsonData = JSON.stringify(jsonParam);
+
+		var sendInfo = {
+				jsonData : jsonData
+		}; 
+
+        //3. ajaxCall에서 사용할 데이터 정리.
+        var data = {
+                callBtn: CallButton,
+                url: url,
+                data: sendInfo,
+                duration: true
+        };          
+        
+        //4. ajax Call
+        ajaxCall.ado(data); 
+
+    }
+
+
+
+    
+
+
+
+
+
+
+
+    /* ####paging function#### */
+
+    
+    //paging number draw
+    function pagingNumberDraw(objIdx, objCnt, objPaginate) { 
+
+    	var objPageIdx  = objIdx;
+    	var objTotalCnt = objCnt;
+    	var now_idx = objPageIdx.val();
+    	var total = objTotalCnt.val();//442;//ajax api 적용 이후 주석 해제 objTotalCnt.val();
+
+    	
+    	console.log('--------------------');
+    	console.log('now_idx : ' + now_idx);
+    	console.log('total : ' + total);
+
+    	
+    	var info = getPagingInfo( now_idx, total, PageSize, PageUnit );
+    	objPaginate.html(""); 
+    	$("#board-paging-number-tmpl").tmpl( info ).appendTo( objPaginate );
+
+
+        //페이징 숫자 버튼클릭시 데이터 갱신 이벤트 처리 
+		objPaginate.find('a[name="current"]').each(function( index ) {
+
+			$(this).click(function() {
+
+				//현재클릭한 페이지번호로 현재 index값 변경
+				now_idx = spaceRemove($(this).html());
+				objPageIdx.val( now_idx );//ajax실제 호출 후 주석처리
+
+				loadData();
+				
+			});
+
+		});
+
+
+		//맨앞, 앞, 뒤, 맨뒤 버튼처리
+		pagingJumpEvent( objPageIdx, total, info.total_page );
+    }
+
+
+    //맨앞, 앞, 뒤, 맨뒤 버튼처리
+    function pagingJumpEvent(objPageIdx, total, lastPage) {
+
+		$("#prev_end").click(function(){
+			objPageIdx.val(1);
+			loadData();
+		});
+		
+	    $("#prev").click(function(){
+	    	var currentPage =0;
+	    	currentPage = objPageIdx.val() - 1;
+	    	if(currentPage &lt; 1){
+	    		currentPage = 1;
+	    	}
+	    	
+	    	console.log('### prev currentPage# : ' + currentPage);
+	    	
+	    	objPageIdx.val(currentPage);
+	    	loadData();
+		});
+	    
+	    $("#next").click(function(){
+	    	var totalPage = (total * 100) / 100;	
+	    	var currentPage = 0;
+	    	currentPage = parseInt( objPageIdx.val() ) + 1;
+	    	
+	    	console.log('### next currentPage# : ' + currentPage);
+	    	
+	    	if(currentPage &gt; totalPage){
+	    		currentPage = totalPage;
+	    	}
+	    	
+	    	objPageIdx.val(currentPage);
+	    	loadData();
+		});
+		
+	    $("#next_end").click(function(){
+	    	//var totalPage = (total * 100) / 100;	    	
+	    	console.log('### next_end lastPage# : ' + lastPage);
+	    	
+	    	objPageIdx.val(lastPage);
+	    	loadData();
+		});
+		
+    }
+
+    /* ####--paging function#### */
+    
+
+
+
+
+
+	
+
+	//일반티켓 검색버튼 클릭 이벤트
+	//$('#productSaleGuide').click(function() {
+	$('a[name="productSaleGuide"]').click(function() {
+
+		tourUI.modal('#pop');
+	});
+
+
+
+
+
+
+	function initialize() {
+
+		//초기 전체공지 데이터 호출
+		loadDataAll();
+		loadDataIndiv();
+	}
+</script>
+
+
+<script>
+$(document).ready(function(){
+
+	
+	initialize();
+	
+});
+</script>				
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+	
+</body></html>
